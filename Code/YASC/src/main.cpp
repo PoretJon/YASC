@@ -69,7 +69,7 @@ void setup() {
   }
 
   // Setup HID
-  usb_hid.setPollInterval(2);
+  usb_hid.setPollInterval(1);
   usb_hid.setReportDescriptor(desc_hid_report, sizeof(desc_hid_report));
   usb_hid.begin();
 
@@ -109,13 +109,6 @@ void loop() {
     return;
   }
 
-//  // Remote wakeup
-//  if ( TinyUSBDevice.suspended() && btn )
-//  {
-//    // Wake up host if we are in suspend mode
-//    // and REMOTE_WAKEUP feature is enabled by host
-//    TinyUSBDevice.remoteWakeup();
-//  }
 
   if (!usb_hid.ready()) return;
 
@@ -145,10 +138,6 @@ void loop() {
   setButtonValue(5, fxr);
 
   setButtonValue(6, btnStart);
-
-  int volLCurrent = vol_l.getCount();
-  int volRCurrent = vol_r.getCount();
-
 
   // knob code: right knob affects y axis, left knob affects x axis
 
