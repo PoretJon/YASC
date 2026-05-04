@@ -7,6 +7,8 @@ YASC is my attempt to make a cheap, open source, easy to build, yet effective So
 
 * 7x Mechanical keyboard switches of your choice
 
+* 2x 2u Durock plate mount stabilizers (others may work but I use these)
+  
 * 1x Pi Pico (use a fullsize one, I prefer using one with USB-C)
 
 * 4x M3 brass threaded inserts
